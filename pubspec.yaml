@@ -1,0 +1,28 @@
+name: budget_etudiant
+description: Suivi privé des dépenses quotidiennes et mensuelles d’un étudiant.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.8.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_secure_storage: 9.2.4
+  path: 1.9.1
+  sqflite: 2.4.2
+
+dependency_overrides:
+  # Évite JNI/NDK : l’implémentation 2.3.x n’est pas nécessaire pour ce stockage local.
+  path_provider_android: 2.2.23
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/wallet_background.jpg
